@@ -1,0 +1,36 @@
+Search and paste the below code above the ']]></b:skin>'
+
+#loader {
+background-color: #fff;
+background-image: url(http://2.bp.blogspot.com/-oPGZaNs5sVA/VjMsQ7sIZQI/AAAAAAAAA9w/q9k-wOikJQI/s1600/preloader.gif);
+background-position: center center;
+background-repeat: no-repeat;
+background-size: 70px 70px;
+bottom: 0px;
+left: 0px;
+position: fixed;
+right: 0px;
+top: 0px;
+z-index: 9999;
+}
+
+
+
+
+Find and paste the code under <body>
+
+<b:if cond='data:blog.pageType == &quot;index&quot;'>
+<div id='loader'/>
+  </b:if>
+
+
+
+Find </body> and paste the code above it
+
+<script type='text/javascript'>//<![CDATA[
+// Loader
+$(window).bind("load",function(){$("#loader").fadeOut(1e3)});
+//]]>
+</script>
+
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js'/>
